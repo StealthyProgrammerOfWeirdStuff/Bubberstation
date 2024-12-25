@@ -81,6 +81,8 @@ var/icon_state_beyond = "size16"
 				worn_icon_state = icon_state_flat
 				to_chat(world, span_yellowteamradio("Fallback icon was used"))
 
+			to_chat(world, span_yellowteamradio("Used worn_icon_state: [worn_icon_state]"))
+
 			//There is probably a nicer way to do this,but I barely understand dm code enough to fetch the tiddy size and I want this to be inheritable, so here we are.
 			//any more experienced coders are welcome to clean this awful switchcase up.
 			//I dont even know if I made this switchcase correctly or actually just made a yandere dev if-statement. because it sure looks like one.
