@@ -10,7 +10,6 @@
 //I know the following looks bad, but some people might want to use two sprites for all of the sizes while others want a sprite for each size
 //this seems to be the simplest way of doing this
 
-///the icon state shown when the Boobable clothing is worn by someone with breasts of size "flatchested".
 var/icon_state_flat = "size1"
 var/icon_state_sizeA = "size1"
 var/icon_state_sizeB = "size2"
@@ -81,7 +80,7 @@ var/icon_state_beyond = "size16"
 				worn_icon_state = icon_state_flat
 				to_chat(world, span_yellowteamradio("Fallback icon was used"))
 
-			to_chat(world, span_yellowteamradio("Used worn_icon_state: [worn_icon_state]"))
+		to_chat(world, span_yellowteamradio("Used worn_icon_state: [worn_icon_state]"))
 
 			//There is probably a nicer way to do this,but I barely understand dm code enough to fetch the tiddy size and I want this to be inheritable, so here we are.
 			//any more experienced coders are welcome to clean this awful switchcase up.
