@@ -23,12 +23,13 @@
 		rawBoobSize = 1
 	else if(rawBoobSize > 18)
 		rawBoobSize = 18
-
 	to_chat(world, span_yellowteamradio("Raw Boob genital_size value: [boob.genital_size]"))
 
 	if (slot == ITEM_SLOT_ICLOTHING)
 		to_chat(world, span_yellowteamradio("attempting to assign correct size"))
 		worn_icon_state = icon_state_size[rawBoobSize + 1]
+
+		update_appearance(UPDATE_ICON_STATE)
 
 		to_chat(world, span_yellowteamradio("Used worn_icon_state: [worn_icon_state]"))
 
