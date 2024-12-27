@@ -11,9 +11,6 @@
 	var/obj/item/organ/external/genital/breasts/boob = null
 	var/rawBoobSize = 1
 
-	//I know the following looks bad, but some people might want to use two sprites for all of the sizes while others want a sprite for each size
-	//this seems to be the simplest way of doing this
-
 	///list holding icon states used for boobables. 1 is flatchested, 18 is eyond measurment. anything in-between is cup A through P
 	var/list/icon_state_size = list("size1", "size1", "size2", "size3", "size4", "size5", "size6", "size7", "size8", "size9", "size10", "size11", "size12", "size13", "size14", "size15", "size16", "size16")
 
