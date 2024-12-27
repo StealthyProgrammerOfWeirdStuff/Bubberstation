@@ -7,6 +7,10 @@
 	worn_icon_state = "size1"
 	worn_icon = 'icons/mob/clothing/under/boobable/BoobableTemplate.dmi'
 
+
+	var/obj/item/organ/external/genital/breasts/boob = null
+	var/rawBoobSize = 1
+
 	//I know the following looks bad, but some people might want to use two sprites for all of the sizes while others want a sprite for each size
 	//this seems to be the simplest way of doing this
 
@@ -16,8 +20,8 @@
 
 /obj/item/clothing/under/boobable/equipped(mob/living/user, slot)
 	. = ..()
-	var/obj/item/organ/external/genital/breasts/boob = user.get_organ_slot(ORGAN_SLOT_BREASTS)
-	var/rawBoobSize = boob.genital_size
+	boob = user.get_organ_slot(ORGAN_SLOT_BREASTS)
+	rawBoobSize = boob.genital_size
 
 	if(rawBoobSize < 1 || boob == null)
 		rawBoobSize = 1
@@ -29,8 +33,14 @@
 		to_chat(world, span_yellowteamradio("attempting to assign correct size"))
 		worn_icon_state = icon_state_size[rawBoobSize + 1]
 
-		update_appearance(UPDATE_ICON_STATE)
+		update_icon(UPDATE_ICON_STATE)
 
 		to_chat(world, span_yellowteamradio("Used worn_icon_state: [worn_icon_state]"))
+
+/obj/item/clothing/under/boobable/update_icon()
+	. = ..()
+	worn_icon_state = icon_state_size[rawBoobSize + 1]
+	return ..()
+
 
 
