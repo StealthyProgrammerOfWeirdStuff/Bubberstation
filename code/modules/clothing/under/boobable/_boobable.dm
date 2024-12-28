@@ -1,9 +1,9 @@
 /obj/item/clothing/under/boobable
 	name = "Boobable Clothing"
 	desc = "A piece of clothing that is lacking the usual NT-brand Bluespace Boob holders"
-	icon = 'icons/obj/clothing/under/color.dmi'
-	icon_state = "jumpsuit"
-	inhand_icon_state = "jumpsuit"
+	icon = 'icons/mob/clothing/under/boobable/BoobableTemplate.dmi'
+	icon_state = "size1"
+	inhand_icon_state = ""
 	worn_icon_state = "size1"
 	worn_icon = 'icons/mob/clothing/under/boobable/BoobableTemplate.dmi'
 
@@ -24,19 +24,16 @@
 		rawBoobSize = 1
 	else if(rawBoobSize > 18)
 		rawBoobSize = 18
-	to_chat(world, span_yellowteamradio("Raw Boob genital_size value: [boob.genital_size]"))
 
 	if (slot == ITEM_SLOT_ICLOTHING)
-		to_chat(world, span_yellowteamradio("attempting to assign correct size"))
-		worn_icon_state = icon_state_size[rawBoobSize + 1]
+		icon_state = icon_state_size[rawBoobSize + 1]
 
 		update_icon(UPDATE_ICON_STATE)
 
-		to_chat(world, span_yellowteamradio("Used worn_icon_state: [worn_icon_state]"))
 
 /obj/item/clothing/under/boobable/update_icon()
 	. = ..()
-	worn_icon_state = icon_state_size[rawBoobSize + 1]
+	icon_state = icon_state_size[rawBoobSize + 1]
 	return ..()
 
 
