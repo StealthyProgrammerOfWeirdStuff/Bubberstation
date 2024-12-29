@@ -18,6 +18,7 @@
     . = ..()
     if (slot == ITEM_SLOT_ICLOTHING)
         wearer = WEAKREF(user)
+        update_appearance(UPDATE_ICON,UPDATE_ICON_STATE)
 
 
 
