@@ -6,6 +6,7 @@
 	inhand_icon_state = ""
 	worn_icon_state = "size1"
 	worn_icon = 'icons/mob/clothing/under/boobable/BoobableTemplate.dmi'
+	female_sprite_flags = NO_FEMALE_UNIFORM
 
 	var/datum/weakref/wearer
 

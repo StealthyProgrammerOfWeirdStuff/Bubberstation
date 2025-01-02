@@ -2,7 +2,13 @@
 	name = "Pizza THOT Uniform"
 	desc = "The uniform of Doggino's competitor \"Pizza: Thick, Hot Oven Treats\" the name of which is usually abbreviated, even on their official branding."
 	icon = 'icons/mob/clothing/under/boobable/PizzaThot.dmi'
+	worn_icon = 'icons/mob/clothing/under/boobable/PizzaThot.dmi'
 
+
+
+/obj/item/clothing/under/boobable/pizzaThot/Initialize(mapload)
+	.=..()
+	can_adjust = FALSE
 	icon_state_size[1] = "size1"
 	icon_state_size[2] = "size1"
 	icon_state_size[3] = "size1"
@@ -21,4 +27,5 @@
 	icon_state_size[16] = "size4"
 	icon_state_size[17] = "size5"
 	icon_state_size[18] = "size5"
+
 
