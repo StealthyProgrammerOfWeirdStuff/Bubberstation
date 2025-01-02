@@ -16,26 +16,26 @@
 
 
 /obj/item/clothing/under/boobable/equipped(mob/living/user, slot)
-    . = ..()
-    if (slot == ITEM_SLOT_ICLOTHING)
-        wearer = WEAKREF(user)
-        update_appearance(UPDATE_ICON,UPDATE_ICON_STATE)
+	. = ..()
+	if (slot == ITEM_SLOT_ICLOTHING)
+		wearer = WEAKREF(user)
+		update_appearance(UPDATE_ICON,UPDATE_ICON_STATE)
 
 
 
 /obj/item/clothing/under/boobable/dropped(mob/living/user)
-    . = ..()
-    wearer = null
+	. = ..()
+	wearer = null
 
 
 /obj/item/clothing/under/boobable/update_icon_state()
-    ..()
-    var/mob/living/carbon/human/humie = wearer?.resolve()
-    if(!humie)
-        return
-    var/obj/item/organ/external/genital/breasts/boob = humie.get_organ_slot(ORGAN_SLOT_BREASTS)
-    var/size = clamp(boob.genital_size, 1, 18)
-    icon_state = icon_state_size[size + 1]
+	..()
+	var/mob/living/carbon/human/humie = wearer?.resolve()
+	if(!humie)
+		return
+	var/obj/item/organ/external/genital/breasts/boob = humie.get_organ_slot(ORGAN_SLOT_BREASTS)
+	var/size = clamp(boob.genital_size, 1, 18)
+	icon_state = icon_state_size[size + 1]
 
 
 
