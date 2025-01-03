@@ -29,6 +29,7 @@
 // here u go, move the stuff in update_icon_state to here, and return the mutable appearance instead of modifying the icon_state
 // plus edit the varnames so they're appropiate for overlays
 // oh yea i have no idea if find_closest_valid_icon works, sorry!
+// oh yea don't forget to move these files into somewhere modular
 // /obj/item/clothing/suit/hazardvest/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 // 	. = ..()
 // 	if(!isinhands)
@@ -43,15 +44,15 @@
 	var/size = 1
 	if(boob)
 		size = clamp(boob.genital_size, 1, MAX_BREAST_SIZE)
+	if(last_size == size)
+		icon_state = last_icon_state
+		return
 	icon_state = find_valid_icon(size)
 	last_icon_state = icon_state
 	last_size = size
 
 /obj/item/clothing/under/boobable/proc/find_valid_icon(size)
 	var/possible_icon_state = "[icon_state_name][size]"
-	if(last_size == size)
-		icon_state = last_icon_state
-		return
 	if(icon_exists(icon, possible_icon_state))
 		return possible_icon_state
 	return find_closest_valid_icon(size)
