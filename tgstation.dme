@@ -4126,6 +4126,7 @@
 #include "code\modules\clothing\under\accessories\medals.dm"
 #include "code\modules\clothing\under\accessories\tribal.dm"
 #include "code\modules\clothing\under\accessories\vests.dm"
+#include "code\modules\clothing\under\boobable\__defines.dm"
 #include "code\modules\clothing\under\boobable\_boobable.dm"
 #include "code\modules\clothing\under\boobable\outfits.dm"
 #include "code\modules\clothing\under\jobs\cargo.dm"
