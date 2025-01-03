@@ -68,7 +68,7 @@
 			continue
 		// get the number index from the icon state searching from the right side
 		var/number = findtext(icon_state, regex(@"(\d+)(?!.*\d)"))
-		if(isnull(number) || closest_size > number)
+		if(!isnum(number) || closest_size > number)
 			continue
 		closest_size = number
 		found_state = icon_state
