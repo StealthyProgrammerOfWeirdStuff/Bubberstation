@@ -1,5 +1,6 @@
 /datum/species/StationGhost
 	name = "Station Phantom"
+	id = SPECIES_GHOST
 	always_customizable = TRUE
 	can_augment = FALSE
 	specific_alpha = 200
